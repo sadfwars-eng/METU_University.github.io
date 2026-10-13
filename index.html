@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Учебный портал METU по русскому языку C1: календарно-тематический план, объяснения преподавателю, примеры, видеоматериалы, СРС/СРСП и экзаменационные вопросы.">
+<title>Русский язык C1 · METU — учебный портал</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="#top" class="brand"><span class="brand-symbol">Р</span><span><strong>METU <em>·</em> РУССКИЙ ЯЗЫК</strong><small>Учебный портал · уровень C1</small></span></a>
+  <button class="mobile-toggle" id="mobileToggle" aria-label="Открыть меню">☰</button>
+  <nav id="mainNav"><a href="#discipline">О дисциплине</a><a href="#plan">План курса</a><a href="#assignments">СРС / СРСП</a><a href="#exam">Экзамен</a><a href="#library">Источники</a></nav>
+</header>
+<main id="top">
+<section class="hero">
+ <div class="hero-copy"><div class="eyebrow"><span class="green-dot"></span> МЕЖДУНАРОДНЫЙ ИНЖЕНЕРНО-ТЕХНОЛОГИЧЕСКИЙ УНИВЕРСИТЕТ</div>
+ <h1>Русский язык<br><span>уровень C1</span></h1>
+ <p class="hero-lede">Понятные объяснения, практические примеры и наглядные схемы для каждой темы курса — от функциональных стилей до структурно-смыслового анализа научного текста.</p>
+ <div class="hero-buttons"><a class="btn btn-primary" href="#plan">Открыть календарный план <span>↗</span></a><a class="btn btn-ghost" href="#exam">Подготовка к экзамену</a></div>
+ <div class="progress-mini"><div class="progress-caption"><span>Темы отмечены как изученные</span><strong id="topProgressText">0 / 15</strong></div><div class="progress-track"><span id="topProgressBar"></span></div></div></div>
+ <div class="hero-visual"><div class="halo"></div><div class="floating-note note-top"><span class="note-icon">Aa</span><span><b>Ясная мысль</b><small>точные слова</small></span></div><div class="book-illustration"><div class="book-topline">METU · C1</div><div class="book-title">НАУЧНАЯ<br>РЕЧЬ</div><div class="book-rule"></div><div class="book-letters">Аа / Бб / Вв</div><div class="book-page">15 недель · 4 модуля</div></div><div class="floating-note note-bottom"><span class="play-small">▶</span><span><b>Теория + практика</b><small>по силлабусу</small></span></div><div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div></div>
+</section>
+<section class="metric-grid"><article><span class="metric-num">5</span><span class="metric-label">кредитов ECTS</span></article><article><span class="metric-num">15</span><span class="metric-label">учебных недель</span></article><article><span class="metric-num">45 + 75 + 30</span><span class="metric-label">практика / СРС / СРСП, часов</span></article><article><span class="metric-num">C1</span><span class="metric-label">уровень курса</span></article></section>
+<section id="discipline" class="section discipline-section"><div class="section-head"><div><div class="eyebrow">01 · ОБЩАЯ ИНФОРМАЦИЯ</div><h2>О дисциплине</h2></div><p>Учебный материал организован по неделям и четырём модулям согласно представленному силлабусу.</p></div>
+ <div class="discipline-grid"><article class="info-card large-info"><div class="card-icon">✦</div><h3>Цель курса</h3><p>Формирование коммуникативной компетенции: умения решать реальные задачи научной сферы средствами русского языка, читать специальную литературу и создавать устные и письменные тексты.</p><div class="tag-row"><span>Научная речь</span><span>Стили языка</span><span>Анализ текста</span></div></article><article class="info-card"><div class="card-icon">◎</div><h3>Формат</h3><p>Очное обучение, 1 курс, осенний семестр. Преподаватель: Тукебаева Жаныл Аубакировна. Контроль по силлабусу — экзамен.</p></article><article class="info-card"><div class="card-icon">↗</div><h3>Результаты обучения</h3><ul><li>Понимать цели научной коммуникации</li><li>Анализировать стиль и структуру текста</li><li>Создавать тексты разных типов</li><li>Развивать критическое мышление</li></ul></article></div>
+</section>
+<section id="plan" class="section plan-section"><div class="section-head"><div><div class="eyebrow">02 · 15 НЕДЕЛЬ / 4 МОДУЛЯ</div><h2>Календарно-тематический план</h2></div><p>Открой неделю, чтобы увидеть теорию, примеры, сценарий объяснения, наглядный мини-клип, упражнения и мотивацию именно по этой теме.</p></div>
+ <div class="plan-tools"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Поиск темы, понятия или примера…"></label><div id="moduleFilters" class="filter-row"></div><div class="expand-tools"><button id="expandAll" class="text-btn">Раскрыть все</button><button id="collapseAll" class="text-btn">Свернуть все</button></div></div>
+ <div id="topicList" class="topic-list"></div><div id="noTopics" class="empty hidden">Темы не найдены. Измени поисковый запрос.</div>
+</section>
+<section id="assignments" class="section assignments-section"><div class="section-head"><div><div class="eyebrow">03 · САМОСТОЯТЕЛЬНАЯ РАБОТА</div><h2>СРС и СРСП</h2></div><p>Ниже — формулировки заданий из силлабуса, сгруппированные по неделям для удобства подготовки и объяснения преподавателем.</p></div>
+ <div class="assignment-grid"><article class="assignment-card"><div class="assignment-top"><span class="assignment-symbol">↗</span><div><h3>СРС</h3><p>Самостоятельная работа студента</p></div></div><div class="assignment-content" id="srsList"></div></article><article class="assignment-card"><div class="assignment-top"><span class="assignment-symbol second">✎</span><div><h3>СРСП</h3><p>Самостоятельная работа с преподавателем</p></div></div><div class="assignment-content" id="srspList"></div></article></div>
+</section>
+<section id="exam" class="section exam-section"><div class="section-head"><div><div class="eyebrow">04 · ИТОГОВЫЙ КОНТРОЛЬ</div><h2>Подготовка к экзамену</h2></div><p>Список экзаменационных вопросов перенесён из силлабуса. Отмечай изученные вопросы — прогресс сохранится в этом браузере.</p></div>
+ <div class="exam-summary"><div><span class="exam-big" id="examCount">0 / 60</span><span class="exam-small">вопросов отмечено</span><div class="progress-track exam-track"><span id="examProgress"></span></div></div><div class="exam-note"><b>Формула итоговой оценки</b><p>И = 0,6 × РКср + 0,4 × Э</p><small>Рейтинг допуска составляет 60%, экзаменационная оценка — 40%.</small></div></div>
+ <div class="exam-actions"><label class="search-box"><span>⌕</span><input id="questionSearch" type="search" placeholder="Найти экзаменационный вопрос…"></label><button id="resetExam" class="text-btn">Сбросить отметки</button></div><div id="questionList" class="question-list"></div>
+ <div class="control-work"><div><span class="eyebrow">РУБЕЖНЫЙ КОНТРОЛЬ</span><h3>Что подготовить</h3></div><div class="control-items"><article><b>РК 1</b><p>Подготовить тексты научного описания, научного повествования и научного рассуждения. Объём — до 300 слов.</p></article><article><b>РК 2</b><p>Подготовить презентацию по календарно-тематическому плану семестра (8–15 недели, тема по выбору). Работа выполняется в проектной группе.</p></article></div></div>
+</section>
+<section id="library" class="section library-section"><div class="section-head"><div><div class="eyebrow">05 · ПОЛЕЗНЫЕ МАТЕРИАЛЫ</div><h2>Источники и литература</h2></div><p>Учебники и открытые ресурсы, указанные в силлабусе или подходящие для проверки языковых понятий.</p></div>
+ <div class="resource-grid"><a class="resource-card" href="https://gramota.ru/" target="_blank" rel="noopener"><span class="resource-icon">Aa</span><b>Грамота.ру</b><small>Нормы, словари, справочники и материалы по стилю.</small><span class="resource-arrow">↗</span></a><a class="resource-card" href="https://academic.ru/" target="_blank" rel="noopener"><span class="resource-icon">⌕</span><b>Академик</b><small>Словари и энциклопедии.</small><span class="resource-arrow">↗</span></a><a class="resource-card" href="https://elibrary.ru/" target="_blank" rel="noopener"><span class="resource-icon">▤</span><b>eLIBRARY.RU</b><small>Научная электронная библиотека.</small><span class="resource-arrow">↗</span></a><a class="resource-card" href="https://rmebrk.kz/" target="_blank" rel="noopener"><span class="resource-icon">⌂</span><b>RMEБРК</b><small>Республиканская межвузовская электронная библиотека.</small><span class="resource-arrow">↗</span></a></div>
+ <div id="literatureList" class="literature-list"></div>
+</section>
+<footer class="site-footer"><div class="footer-brand"><span class="brand-symbol">Р</span><span><b>METU · Русский язык C1</b><small>Учебный портал для объяснения и повторения материала</small></span></div><p>Материалы собраны по предоставленному силлабусу. Примеры и методические подсказки — вспомогательные; нормативные документы и конкретные формулировки следует сверять с актуальными источниками.</p><a href="#top" class="to-top">Наверх ↑</a></footer>
+</main>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="content.js"></script><script src="app.js"></script>
+</body></html>
