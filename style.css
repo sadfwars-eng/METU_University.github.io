@@ -13,3 +13,52 @@
 .logo-mark img{padding:3px;background:white;object-fit:contain}
 .footer-logo{height:55px;width:130px;object-fit:contain;object-position:center;background:#0f1a30;border-radius:4px;padding:3px}
 @media(max-width:760px){.footer-logo{height:48px;width:110px;margin-bottom:8px}}
+
+
+/* METU Blue Edition: independent contemporary design */
+:root{
+ --navy:#123c91;--navy2:#102e6d;--navy3:#081f4e;
+ --burgundy:#1460dc;--burgundy-dark:#0e4dbb;
+ --ivory:#f2f7ff;--ivory2:#ffffff;--ivory3:#eaf2ff;
+ --gold:#66c4ff;--gold2:#2277e4;
+ --text:#183153;--muted:#657b98;--line:#dbe7f8;
+ --shadow:0 9px 28px rgba(17,65,141,.075);
+}
+body{background:linear-gradient(135deg,#edf5ff 0%,#f8fbff 55%,#eef5ff 100%);font-family:Inter,system-ui,sans-serif}
+h1,h2,h3,h4,.panel-title,.quick-card b,.topic-summary-text strong,.stat b,.module-banner,.week-number,.grade-item b,.site-footer b{font-family:Inter,system-ui,sans-serif;letter-spacing:-.025em}
+.academic-header{background:linear-gradient(110deg,#081f4e,#144ca7 65%,#2076d8);border-bottom:0;box-shadow:0 8px 26px #0c347331}
+.header-inner{padding-top:22px;padding-bottom:22px}
+.top-nav{background:#0b2b65;border-top:1px solid #ffffff20}
+.nav-button.active{border-bottom-color:#65caff}
+.nav-button .nav-icon{color:#9cdbff}
+.institution{background:#ffffff1d;color:#eaf5ff;border:1px solid #ffffff30;border-radius:30px;padding:5px 12px}
+.logo-mark{width:68px;height:68px;background:transparent;border:0;border-radius:0;box-shadow:none;overflow:visible}
+.logo-mark img{background:transparent;padding:0;object-fit:contain}
+.panel,.academic-card,.topic-card,.topic-block,.quick-card,.book-card{border-radius:15px;border-color:#dce8f9;box-shadow:var(--shadow)}
+.academic-card{padding:26px}
+.hero-card{border-top:0;background:linear-gradient(120deg,#fff,#f0f7ff);border-left:5px solid #2577e5}
+.progress-panel{border-top:4px solid #2679e6}
+.panel-title{background:linear-gradient(100deg,#123d89,#1e6cd1);border-bottom:0;border-radius:14px 14px 0 0}
+.side-nav button.active{background:#eaf3ff;color:#104aab;border-left:4px solid #2678e5;font-weight:700}
+.side-nav button:hover{background:#f2f7ff}
+.panel-kicker,.section-label,.topic-summary-text small{color:#1e67c9}
+.note-panel{background:#f4f9ff;border-left-color:#2a80ed}
+.week-number{border:0;border-radius:12px;background:linear-gradient(135deg,#0d4bb4,#339aff);box-shadow:0 4px 12px #165cc83b}
+.topic-card[open]{border-color:#a7ccff;box-shadow:0 12px 28px #124b9b18}
+.topic-goal{background:#eef6ff;border-left-color:#2b81eb;border-radius:8px}
+.topic-goal b{color:#165fca}
+.teacher-tip{background:#edf6ff;border-color:#d6e9ff;border-radius:10px}
+.teacher-tip h3{color:#145fca}
+.example-box{background:#f2f8ff;border-left-color:#49a8f5;border-radius:7px}
+.module-banner{border-left-color:#2e86f5;border-radius:9px}
+.btn,.search-field{border-radius:9px}
+.btn-primary{background:#1667d6;border-color:#1667d6}
+.btn-primary:hover{background:#104ca9}
+.filter-chip.active,.filter-chip:hover{background:#1b68d1;border-color:#1b68d1}
+.progress-track>div{background:linear-gradient(90deg,#155ac6,#42b8ff)}
+.syllabus-tasks{background:#f2f8ff;border-color:#d4e6fb}
+.syllabus-tasks summary{color:#185fbd}
+.site-footer{background:#e4efff;border-top-color:#c9ddf9}
+.footer-logo{width:165px;height:70px;background:transparent;border:0;padding:0;object-fit:contain}
+.logo-mark img,.footer-logo{filter:drop-shadow(0 3px 4px #12356b18)}
+@media(max-width:760px){.academic-card{padding:18px}.logo-mark{width:55px;height:55px}.footer-logo{width:145px;height:62px}}
