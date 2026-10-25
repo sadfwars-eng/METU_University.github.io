@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Образовательный сайт по русскому языку для преподавателей и студентов METU. Темы, теория, примеры, видео и мотивация.">
+<title>METU | Русский язык C1 — учебные программы</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" id="homeBrand" aria-label="На главную">
+    <img class="brand-logo" src="logo-shield.png" alt="METU"><span><b>РУССКИЙ ЯЗЫК</b><small>METU · материалы преподавателю</small></span>
+  </a>
+  <button class="menu-btn" id="menuBtn" aria-label="Открыть меню">☰</button>
+  <nav id="topNav">
+    <a href="#topicsSection">Темы</a><a href="#syllabus">Силлабус</a><a href="#about">О проекте</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <div class="eyebrow"><span class="dot"></span> ОБРАЗОВАТЕЛЬНАЯ ПЛАТФОРМА</div>
+    <h1>Объяснять сложное.<br><span>Понятно и наглядно.</span></h1>
+    <p>Материалы для преподавателя по дисциплине «Русский язык» (C1): подробная теория, практические примеры, видео и задания по двум силлабусам и всем 30 темам.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#topicsSection">Перейти к темам <span>→</span></a>
+      <span class="hero-note">30 тем · 2 учебные программы</span><button class="continue-link hidden" id="continueBtn" type="button">Продолжить последнюю тему →</button>
+    </div>
+  </div>
+  <div class="hero-art teacher-hero">
+    <div class="teacher-frame">
+      <img src="https://jarv1s-stack.github.io/metu_rus_silabus/teacher1.jpeg" alt="Фотография преподавателя" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="teacher-placeholder" style="display:none">Фото преподавателя</div>
+      <div class="teacher-caption"><strong>Университет METU</strong><span>Тукебаева Жаныл Аубакировна — ассоциированный профессор</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-row">
+  <div><strong>30</strong><span>тем в двух программах</span></div>
+  <div><strong>2</strong><span>силлабуса</span></div>
+  <div><strong>7</strong><span>модулей в двух программах</span></div>
+</section>
+
+<section class="content-section" id="topicsSection">
+  <div class="section-heading">
+    <div><div class="eyebrow">КАТАЛОГ МАТЕРИАЛОВ</div><h2>Выберите тему</h2><p>Откройте тему, чтобы увидеть полное объяснение, примеры, видео и задания. <span id="progressSummary"></span></p></div>
+    <div class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Найти тему..." aria-label="Найти тему"></div>
+  </div>
+  <div class="syllabus-switch" role="group" aria-label="Выбор учебной программы"><button type="button" class="syllabus-tab active" id="syllabusTab1" aria-pressed="true">Syllabus 1 <small>15 тем · 4 модуля</small></button><button type="button" class="syllabus-tab" id="syllabusTab2" aria-pressed="false">Syllabus 2 <small>15 тем · 3 модуля</small></button></div>
+  <div class="module-filters" id="moduleFilters"></div>
+  <div id="topicGrid" class="topic-grid"></div>
+  <div id="emptyState" class="empty-state hidden">По вашему запросу темы не найдены. Попробуйте другое слово.</div>
+</section>
+
+<section class="about-section" id="syllabus"><div class="about-icon">≡</div><div style="width:100%"><div class="eyebrow">ДОПОЛНИТЕЛЬНЫЕ МАТЕРИАЛЫ</div><h2 id="syllabusHeading">Syllabus 1 — справочные материалы</h2><p>Экзаменационные вопросы и список литературы доступны для справки преподавателю.</p><details><summary id="questionsSummary">60 экзаменационных вопросов</summary><ol id="examQuestions" class="reference-list"></ol></details><details><summary>Список литературы</summary><div id="literature" class="reference-list"></div></details></div></section><section class="about-section" id="about">
+  <div class="about-icon">✦</div>
+  <div><div class="eyebrow">О ПРОЕКТЕ</div><h2>Учебный материал — в одном месте</h2><p>Сайт создан как вспомогательный инструмент для преподавателя: каждая тема включает подробную теорию, наглядные примеры, задания для обсуждения и отдельный мотивационный блок. Темы двух программ взяты из предоставленных учебных планов. Учебные объяснения и примеры являются авторскими разработками для преподавателя и требуют проверки перед занятием.</p></div>
+</section>
+<footer><div class="footer-brand"><img class="brand-logo" src="logo-shield.png" alt="METU"><span><b>РУССКИЙ ЯЗЫК</b><small>METU · материалы преподавателю</small></span></div><span>Учебный проект · 2026 · Материалы предназначены для образовательного использования; права на сторонние материалы принадлежат их правообладателям</span></footer>
+</main>
+
+<div class="lesson-overlay hidden" id="lessonOverlay">
+  <article class="lesson-panel" role="dialog" aria-modal="true" aria-labelledby="lessonTitle">
+    <button class="close-btn" id="closeLesson" aria-label="Закрыть">×</button>
+    <button class="back-link" id="backToTopics">← Все темы</button>
+    <div class="lesson-meta"><span id="lessonModule"></span><span id="lessonNumber"></span></div>
+    <h1 id="lessonTitle"></h1>
+    <p class="lesson-goal" id="lessonGoal"></p>
+    <div class="lesson-layout">
+      <div class="lesson-main">
+        <section class="lesson-block">
+          <div class="block-title"><span class="block-icon icon-book">▤</span><div><small>РАЗДЕЛ 01</small><h2>Теоретический материал</h2></div></div>
+          <div id="lessonTheory" class="academic-text"></div>
+        </section>
+        <section class="lesson-block">
+          <div class="block-title"><span class="block-icon icon-example">✦</span><div><small>РАЗДЕЛ 02</small><h2>Примеры с объяснением</h2></div></div>
+          <div class="example-box academic-text" id="lessonExample"></div>
+        </section>
+        <section class="lesson-block">
+          <div class="block-title"><span class="block-icon icon-task">✓</span><div><small>РАЗДЕЛ 03</small><h2>Вопросы для обсуждения</h2></div></div>
+          <ol id="lessonSteps" class="steps-list"></ol>
+        </section>
+        <section class="lesson-block"><div class="block-title"><span class="block-icon icon-task">✎</span><div><small>РАЗДЕЛ 04</small><h2>Практическая работа</h2></div></div><div id="lessonPractice" class="academic-text"></div></section><section class="lesson-block video-block">
+          <div class="block-title"><span class="block-icon icon-video">▶</span><div><small>РАЗДЕЛ 05</small><h2>Видеоматериал</h2></div></div>
+          <p id="videoDescription"></p><div id="videoEmbed"></div>
+          <a class="btn btn-primary" id="videoSearch" href="#" target="_blank" rel="noopener">Открыть материал ↗</a>
+          <div class="video-note">Внешние видео могут требовать подключения к интернету и разрешения на встраивание со стороны видеосервиса.</div>
+        </section>
+        <section class="lesson-block"><div class="block-title"><span class="block-icon icon-book">✓</span><div><small>РАЗДЕЛ 06</small><h2>Закрепление материала</h2></div></div><div class="task-line"><b>Конспект</b><p id="taskNotes"></p></div><div class="task-line"><b>Рассказ по теме</b><p id="taskSpeech"></p></div><details class="syllabus-extra"><summary>Дополнительно по силлабусу: СРС и СРСП</summary><p id="lessonSrs"></p><p id="lessonSrsp"></p></details></section><section class="motivation-card">
+          <div class="motivation-star">✦</div><div class="eyebrow">МОТИВАЦИЯ ЭТОЙ ТЕМЫ</div>
+          <h2>Продолжайте двигаться вперёд</h2><p id="lessonMotivation"></p>
+          
+        </section>
+      </div>
+      <aside class="teacher-tip">
+        <div class="teacher-tip-icon">✎</div><h3>Подсказка преподавателю</h3>
+        <p>Сначала объясните основную идею простыми словами, затем разберите пример вместе с группой. В конце попросите студентов привести собственный пример.</p>
+        <div class="tip-line"></div><span>ПЛАН ОБЪЯСНЕНИЯ</span>
+        <ol><li>Объяснить понятие</li><li>Показать пример</li><li>Обсудить применение</li></ol>
+      </aside>
+    </div>
+    <div class="lesson-footer"><button class="btn btn-outline" id="prevTopic">← Предыдущая тема</button><button class="btn btn-outline" id="markDone">Отметить как пройденную</button><button class="btn btn-primary" id="nextTopic">Следующая тема →</button></div>
+  </article>
+</div>
+<script src="topics.js"></script>
+<script src="content.js"></script>
+<script src="syllabus2.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
