@@ -114,23 +114,32 @@ renderSyllabusReference();
 
 renderFilters();renderTopics();
 
-// Мягкое ограничение: действует только внутри учебных текстов.
-// Не блокируем весь сайт, F12, Ctrl+U и функции доступности браузера.
+// Ограничение обычного копирования в карточках, модулях, уроках и справочниках.
+// Это не DRM: исходные файлы публичного сайта технически доступны посетителям.
 const protectedContentSelector = [
- '#lessonTheory','#lessonExample','#lessonPractice','#lessonSteps',
- '#taskNotes','#taskSpeech','#lessonMotivation',
- '#lessonSrs','#lessonSrsp','#examQuestions','#literature'
+  '#topicGrid', '#moduleFilters', '.lesson-panel',
+  '#syllabusHeading', '#examQuestions', '#literature',
+  '#questionsSummary'
 ].join(',');
-function inProtectedContent(node) {
-  const element = node?.nodeType === Node.ELEMENT_NODE ? node : node?.parentElement;
-  return Boolean(element?.closest?.(protectedContentSelector));
+function isProtectedNode(node) {
+  const el = node && node.nodeType === 1 ? node : node?.parentElement;
+  return Boolean(el?.closest?.(protectedContentSelector));
 }
 document.addEventListener('contextmenu', event => {
-  if (inProtectedContent(event.target)) event.preventDefault();
+  if (isProtectedNode(event.target)) event.preventDefault();
 });
 document.addEventListener('copy', event => {
   const selection = window.getSelection();
-  if (selection && (inProtectedContent(selection.anchorNode) || inProtectedContent(selection.focusNode))) {
+  if (isProtectedNode(event.target) ||
+      (selection && (isProtectedNode(selection.anchorNode) ||
+                     isProtectedNode(selection.focusNode)))) {
     event.preventDefault();
+    if (event.clipboardData) event.clipboardData.clearData();
   }
+});
+document.addEventListener('cut', event => {
+  if (isProtectedNode(event.target)) event.preventDefault();
+});
+document.addEventListener('dragstart', event => {
+  if (isProtectedNode(event.target)) event.preventDefault();
 });

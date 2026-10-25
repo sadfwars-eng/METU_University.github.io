@@ -66,3 +66,20 @@ input, textarea, [contenteditable="true"] {
 .syllabus-tab.active small{color:#5e7190}
 #lessonSrs,#lessonSrsp,#examQuestions,#literature{user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
 @media(max-width:560px){.syllabus-switch{max-width:100%}.syllabus-tab{padding:11px 12px;font-size:13px}.syllabus-tab small{font-size:10px}}
+
+
+/* v13: названия модулей и карточек также защищены от простого выделения */
+#topicGrid, #moduleFilters, .lesson-panel, #syllabusHeading,
+#examQuestions, #literature, #questionsSummary {
+  -webkit-user-select:none;
+  user-select:none;
+  -webkit-touch-callout:none;
+}
+#topicGrid *, #moduleFilters *, .lesson-panel * {
+  -webkit-user-select:none;
+  user-select:none;
+}
+input, textarea, [contenteditable="true"] {
+  -webkit-user-select:text !important;
+  user-select:text !important;
+}
