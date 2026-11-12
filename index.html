@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Образовательный сайт по русскому языку для преподавателей и студентов METU. Темы, теория, примеры, видео и мотивация.">
+<title>METU | Русский язык C1 — учебные программы</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" id="homeBrand" aria-label="На главную">
+    <img class="brand-logo" src="logo-shield.png" alt="METU"><span><b>РУССКИЙ ЯЗЫК</b><small>METU · материалы преподавателю</small></span>
+  </a>
+  <button class="menu-btn" id="menuBtn" aria-label="Открыть меню">☰</button>
+  <nav id="topNav">
+    <a href="#guide">Инструкция</a><a href="#books">Книги</a><a href="#topicsSection">Темы</a><a href="#syllabus">Силлабус</a><a href="#about">О проекте</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <div class="eyebrow"><span class="dot"></span> ОБРАЗОВАТЕЛЬНАЯ ПЛАТФОРМА</div>
+    <h1>Объяснять сложное.<br><span>Понятно и наглядно.</span></h1>
+    <p>Материалы для преподавателя по дисциплине «Русский язык» (C1): подробная теория, практические примеры, видео и задания по двум силлабусам и всем 30 темам.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#topicsSection">Перейти к темам <span>→</span></a>
+      <span class="hero-note">30 тем · 2 учебные программы</span><button class="continue-link hidden" id="continueBtn" type="button">Продолжить последнюю тему →</button>
+    </div>
+  </div>
+  <div class="hero-art teacher-hero">
+    <div class="teacher-frame">
+      <img src="teacher.jpg" alt="Фотография преподавателя" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="teacher-placeholder" style="display:none">Фото преподавателя</div>
+      <div class="teacher-caption"><strong>Университет METU</strong><span>Тукебаева Жаныл Аубакировна — ассоциированный профессор</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-row">
+  <div><strong>30</strong><span>тем в двух программах</span></div>
+  <div><strong>2</strong><span>силлабуса</span></div>
+  <div><strong>7</strong><span>модулей в двух программах</span></div>
+</section>
+
+<section class="guide-section" id="guide"><div class="eyebrow">НАВИГАЦИЯ ПО САЙТУ</div><h2>Как пользоваться сайтом</h2><div class="guide-grid"><div><b>01 · Выберите программу</b><p>Откройте Syllabus 1 или Syllabus 2, затем выберите модуль и тему.</p></div><div><b>02 · Изучите материал</b><p>Прочитайте теорию, примеры, посмотрите учебное видео и отметьте тему как изученную.</p></div><div><b>03 · Пройдите тест</b><p>Ответьте на 15 вопросов и нажмите «Отправить ответы». Перед отправкой проверьте выбор: изменить его на этом устройстве после отправки нельзя.</p></div><div><b>04 · Покажите преподавателю</b><p>Откройте уже отправленный тест на своём устройстве: выбранные ответы останутся видны. Сведения хранятся только в этом браузере.</p></div></div></section>
+<section class="content-section book-section" id="books"><div class="eyebrow">ЭЛЕКТРОННАЯ БИБЛИОТЕКА</div><h2>Силлабусы в формате книги</h2><p>Выберите документ, затем перелистывайте страницы. Светлый водяной знак METU добавлен для обозначения учебного проекта.</p><div class="book-buttons"><button class="btn btn-primary" id="openBook1">Читать Syllabus 1 ↗</button><button class="btn btn-outline" id="openBook2">Читать Syllabus 2 ↗</button></div></section>
+<section class="content-section" id="topicsSection">
+  <div class="section-heading">
+    <div><div class="eyebrow">КАТАЛОГ МАТЕРИАЛОВ</div><h2>Выберите тему</h2><p>Откройте тему, чтобы увидеть полное объяснение, примеры, видео и задания. <span id="progressSummary"></span></p></div>
+    <div class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Найти тему..." aria-label="Найти тему"></div>
+  </div>
+  <div class="syllabus-switch" role="group" aria-label="Выбор учебной программы"><button type="button" class="syllabus-tab active" id="syllabusTab1" aria-pressed="true">Syllabus 1 <small>15 тем · 4 модуля</small></button><button type="button" class="syllabus-tab" id="syllabusTab2" aria-pressed="false">Syllabus 2 <small>15 тем · 3 модуля</small></button></div>
+  <div class="module-filters" id="moduleFilters"></div>
+  <div id="topicGrid" class="topic-grid"></div>
+  <div id="emptyState" class="empty-state hidden">По вашему запросу темы не найдены. Попробуйте другое слово.</div>
+</section>
+
+<section class="about-section" id="syllabus"><div class="about-icon">≡</div><div style="width:100%"><div class="eyebrow">ДОПОЛНИТЕЛЬНЫЕ МАТЕРИАЛЫ</div><h2 id="syllabusHeading">Syllabus 1 — справочные материалы</h2><p>Экзаменационные вопросы и список литературы доступны для справки преподавателю.</p><details><summary id="questionsSummary">60 экзаменационных вопросов</summary><ol id="examQuestions" class="reference-list"></ol></details><details><summary>Список литературы</summary><div id="literature" class="reference-list"></div></details></div></section><section class="about-section" id="about">
+  <div class="about-icon">✦</div>
+  <div><div class="eyebrow">О ПРОЕКТЕ</div><h2>Учебный материал — в одном месте</h2><p>Сайт создан как вспомогательный инструмент для преподавателя: каждая тема включает подробную теорию, наглядные примеры, задания для обсуждения и отдельный мотивационный блок. Темы двух программ взяты из предоставленных учебных планов. Учебные объяснения и примеры являются авторскими разработками для преподавателя и требуют проверки перед занятием.</p></div>
+</section>
+<footer><div class="footer-brand"><img class="brand-logo" src="logo-shield.png" alt="METU"><span><b>РУССКИЙ ЯЗЫК</b><small>METU · материалы преподавателю</small></span></div><span>Учебный проект · 2026 · Материалы предназначены для образовательного использования; права на сторонние материалы принадлежат их правообладателям</span></footer>
+</main>
+
+<div class="lesson-overlay hidden" id="lessonOverlay">
+  <article class="lesson-panel" role="dialog" aria-modal="true" aria-labelledby="lessonTitle">
+    <button class="close-btn" id="closeLesson" aria-label="Закрыть">×</button>
+    <button class="back-link" id="backToTopics">← Все темы</button>
+    <div class="lesson-meta"><span id="lessonModule"></span><span id="lessonNumber"></span></div>
+    <h1 id="lessonTitle"></h1>
+    <p class="lesson-goal" id="lessonGoal"></p>
+    <div class="lesson-layout">
+      <div class="lesson-main">
+        <section class="lesson-block">
+          <div class="block-title"><span class="block-icon icon-book">▤</span><div><small>РАЗДЕЛ 01</small><h2>Теоретический материал</h2></div></div>
+          <div id="lessonTheory" class="academic-text"></div>
+        </section>
+        <section class="lesson-block">
+          <div class="block-title"><span class="block-icon icon-example">✦</span><div><small>РАЗДЕЛ 02</small><h2>Примеры с объяснением</h2></div></div>
+          <div class="example-box academic-text" id="lessonExample"></div>
+        </section>
+        <section class="lesson-block">
+          <div class="block-title"><span class="block-icon icon-task">✓</span><div><small>РАЗДЕЛ 03</small><h2>Вопросы для обсуждения</h2></div></div>
+          <ol id="lessonSteps" class="steps-list"></ol>
+        </section>
+        <section class="lesson-block"><div class="block-title"><span class="block-icon icon-task">✎</span><div><small>РАЗДЕЛ 04</small><h2>Практическая работа</h2></div></div><div id="lessonPractice" class="academic-text"></div></section><section class="lesson-block video-block">
+          <div class="block-title"><span class="block-icon icon-video">▶</span><div><small>РАЗДЕЛ 05</small><h2>Видеоматериал</h2></div></div>
+          <p id="videoDescription"></p><div id="videoEmbed"></div>
+          <a class="btn btn-primary" id="videoSearch" href="#" target="_blank" rel="noopener">Открыть материал ↗</a>
+          <div class="video-note">Внешние видео могут требовать подключения к интернету и разрешения на встраивание со стороны видеосервиса.</div>
+        </section>
+        <section class="lesson-block"><div class="block-title"><span class="block-icon icon-book">✓</span><div><small>РАЗДЕЛ 06</small><h2>Закрепление материала</h2></div></div><div class="task-line"><b>Конспект</b><p id="taskNotes"></p></div><div class="task-line"><b>Рассказ по теме</b><p id="taskSpeech"></p></div><details class="syllabus-extra"><summary>Дополнительно по силлабусу: СРС и СРСП</summary><p id="lessonSrs"></p><p id="lessonSrsp"></p></details></section><section class="lesson-block" id="quizSection"><div class="block-title"><span class="block-icon icon-task">▣</span><div><small>РАЗДЕЛ 07</small><h2>Тест по теме · 5 вопросов</h2></div></div><p class="quiz-note">Ответы сохраняются только в этом браузере. После отправки изменить их нельзя. Преподаватель сможет посмотреть выбранные ответы на вашем устройстве.</p><div id="quizContainer"></div></section><section class="lesson-block task-checklist" id="requiredTasksSection" aria-labelledby="requiredTasksTitle">
+<div class="block-title"><span class="block-icon icon-task">✓</span><div><small>РАЗДЕЛ 08 · КОНТРОЛЬ ВЫПОЛНЕНИЯ</small><h2 id="requiredTasksTitle">Обязательные задания · 4 пункта</h2></div></div>
+<p class="task-intro">Выполните все четыре задания по текущей теме. После выполнения первых трёх отметьте их галочками. Четвёртый пункт отмечается автоматически только после отправки теста.</p>
+<div class="required-tasks-list">
+<label class="required-task"><input type="checkbox" id="requiredTaskNotes"><span><b>1. Конспект</b><small>Напишите конспект по теме.</small></span></label>
+<label class="required-task"><input type="checkbox" id="requiredTaskSpeech"><span><b>2. Пересказ</b><small>Подготовьте пересказ и расскажите его преподавателю.</small></span></label>
+<label class="required-task"><input type="checkbox" id="requiredTaskSlides"><span><b>3. Презентация (слайды)</b><small>Создайте слайды по теме и покажите преподавателю.</small></span></label>
+<label class="required-task required-task-auto"><input type="checkbox" id="requiredTaskQuiz" disabled><span><b>4. Тест · 5 вопросов</b><small id="requiredQuizStatus">Пройдите тест и нажмите «Отправить ответы». Галочка появится автоматически.</small></span></label>
+</div>
+<div class="required-progress" aria-live="polite"><strong id="requiredProgressText">Выполнено: 0 из 4</strong><div class="required-progress-track"><div id="requiredProgressFill"></div></div><p id="requiredCompletionStatus">Тема ещё не выполнена полностью.</p></div>
+<p class="required-warning"><strong>Важно!</strong> Все четыре задания обязательны. Невыполнение может привести к снижению оценки по правилам преподавателя. Отмечайте галочками только реально выполненные задания.</p>
+<p class="required-disclaimer">Галочки для конспекта, пересказа и презентации ставит сам студент; они не заменяют проверку преподавателя. Данные хранятся в этом браузере и могут исчезнуть при очистке его данных.</p>
+</section><section class="motivation-card">
+          <div class="motivation-star">✦</div><div class="eyebrow">МОТИВАЦИЯ ЭТОЙ ТЕМЫ</div>
+          <h2>Продолжайте двигаться вперёд</h2><p id="lessonMotivation"></p>
+          
+        </section>
+      </div>
+      <aside class="teacher-tip">
+        <div class="teacher-tip-icon">✎</div><h3>Подсказка преподавателю</h3>
+        <p>Сначала объясните основную идею простыми словами, затем разберите пример вместе с группой. В конце попросите студентов привести собственный пример.</p>
+        <div class="tip-line"></div><span>ПЛАН ОБЪЯСНЕНИЯ</span>
+        <ol><li>Объяснить понятие</li><li>Показать пример</li><li>Обсудить применение</li></ol>
+      </aside>
+    </div>
+    <div class="lesson-footer"><button class="btn btn-outline" id="prevTopic">← Предыдущая тема</button><button class="btn btn-outline" id="markDone">Отметить как пройденную</button><button class="btn btn-primary" id="nextTopic">Следующая тема →</button></div>
+  </article>
+</div>
+<div class="book-overlay hidden" id="bookOverlay" role="dialog" aria-modal="true" aria-label="Просмотр силлабуса"><div class="book-shell"><div class="book-toolbar"><strong id="bookTitle">Syllabus</strong><span id="bookCounter"></span><button id="closeBook" class="btn btn-outline">Закрыть ×</button></div><div class="book-view"><button id="bookPrev" aria-label="Предыдущая страница">‹</button><img id="bookPage" alt="Страница силлабуса" draggable="false"><button id="bookNext" aria-label="Следующая страница">›</button></div><div class="book-bottom"><button id="bookPrevBottom" class="btn btn-outline">← Назад</button><span>METU · учебные материалы</span><button id="bookNextBottom" class="btn btn-primary">Далее →</button></div></div></div>
+<script src="topics.js"></script>
+<script src="content.js"></script>
+<script src="syllabus2.js"></script>
+<script src="quizzes.js"></script>
+<script src="script.js"></script>
+<script src="features.js"></script>
+<script src="tasks.js"></script>
+</body>
+</html>
